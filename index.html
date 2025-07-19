@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container glass">
+            <h1>Create Your Portfolio</h1>
+            <form id="portfolioForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="profileImage">Profile Image</label>
+                    <input type="file" id="profileImage" accept="image/*" required>
+                    <div id="imagePreview" class="image-preview"></div>
+                </div>
+                <div class="form-group">
+                    <label for="bio">About Me / Bio</label>
+                    <textarea id="bio" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="skills">Skills (comma-separated)</label>
+                    <input type="text" id="skills" required>
+                </div>
+                <div class="form-group">
+                    <h3>Projects</h3>
+                    <div id="projectsContainer">
+                        <div class="project-entry">
+                            <input type="text" placeholder="Project Title" class="project-title" required>
+                            <input type="text" placeholder="Project Description" class="project-desc" required>
+                            <input type="url" placeholder="Project Link" class="project-link" required>
+                        </div>
+                    </div>
+                    <button type="button" id="addProject" class="btn-secondary">Add Project</button>
+                </div>
+                <div class="form-group">
+                    <label for="linkedin">LinkedIn URL</label>
+                    <input type="url" id="linkedin">
+                </div>
+                <div class="form-group">
+                    <label for="github">GitHub URL</label>
+                    <input type="url" id="github">
+                </div>
+                <div class="form-group">
+                    <label for="instagram">Instagram URL</label>
+                    <input type="url" id="instagram">
+                </div>
+                <div class="form-group">
+                    <label for="youtube">YouTube URL</label>
+                    <input type="url" id="youtube">
+                </div>
+                <button type="submit" class="btn-primary">Generate Portfolio</button>
+            </form>
+        </div>
+        <div class="preview-container glass" id="preview">
+            <h2>Preview</h2>
+            <div id="portfolioPreview"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
